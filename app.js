@@ -1,7 +1,5 @@
 const profileDataArgs = process.argv.slice(2, process.argv.length);
 const fs = require('fs')
-// const name = profileDataArgs[0];
-// const github = profileDataArgs[1];
 const [name, github] = profileDataArgs;
 
 const printProfileData = profileDataArr => {
@@ -30,7 +28,6 @@ const generatePage = (name, github) => {
   `;
 };
 
-// const generatePage = () => 'Name: Jane, Github: janehub';
 
 fs.writeFile('index.html', generatePage(name, github), err => {
   if (err) throw err;
